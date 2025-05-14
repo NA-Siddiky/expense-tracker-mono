@@ -6,17 +6,13 @@ import {createUser} from '../actions/createUser'
 
 export const SignupForm: React.FC = () => {
   const [state, formAction] = useFormState(createUser, {message: ''})
-
   const {error, message, success} = state
-
-  console.log('state', state)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     const formData = new FormData(e.currentTarget)
     const emailValue = formData.get('email')
     const email = typeof emailValue === 'string' ? emailValue : null
-
     formAction({email})
   }
 
