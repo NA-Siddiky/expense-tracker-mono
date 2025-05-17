@@ -1,12 +1,10 @@
 import './App.css'
-import {SignupForm} from './components/SignupForm'
-import {ExpenseListScreen} from './screens/ExpenseListScreen'
+import {DashboardScreen} from './screens/dashboard/components/Dashboard.screen'
 
 export const App: React.FC = () => {
   return (
     <>
-      <ExpenseListScreen />
-      <SignupForm />
+      <DashboardScreen />
     </>
   )
 }
