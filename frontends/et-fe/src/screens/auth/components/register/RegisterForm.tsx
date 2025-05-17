@@ -2,9 +2,9 @@
 
 import type React from 'react'
 import {useFormState} from 'react-dom'
-import {createUser} from '../actions/createUser'
+import {createUser} from '../../../../actions/createUser'
 
-export const SignupForm: React.FC = () => {
+export const RegisterForm: React.FC = () => {
   const [state, formAction] = useFormState(createUser, {message: ''})
   const {error, message, success} = state
 
@@ -31,7 +31,7 @@ export const SignupForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input name="email" />
-      <button type="submit">Sign Up</button>
+      <button type="submit">Register</button>
       {showErrorMessage}
       {showSuccessMessage}
     </form>
